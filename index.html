@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Barbería en Montevideo | Cortes modernos y reservas online</title>
+  <meta name="description"
+    content="Reservá tu turno en nuestra barbería. Cortes modernos, barba y estilo profesional. Atención rápida y reservas por WhatsApp o Calendly.">
+  <meta name="keywords" content="barberia, corte de pelo, fade, barba, barberia montevideo">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Barbería Premium">
+  <meta property="og:description" content="Reservá tu turno online fácil y rápido">
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Koalendar -->
+  <script async src="https://koalendar.com/assets/widget.js"></script>
+
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="text-white bg-gray-800 w-full">
+
+  <header class="h-screen flex items-center justify-center text-center bg-cover bg-center bg-no-repeat">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Cortes premium en Montevideo</h1>
+      <p class="text-gray-400 mb-8 text-lg md:text-xl">Elegí tu horario y asegurá tu lugar sin esperas</p>
+      <a href="https://koalendar.com/e/reunion-con-zinedine/" target="_blankñ" data-koalendar-widget
+        data-koa-type="link"
+        class="w-full no-underline md:w-auto bg-white text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition duration-300 shadow-lg">
+        Reservar turno
+      </a>
+    </div>
+  </header>
+
+  <!-- Servicios -->
+  <section class=" text-center m-auto px-5 py-14 md: max-w-6xl">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-12">Servicios</h2>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="bg-[#0f172a] p-6 rounded-3xl">
+        <h3 class="text-l md:text-xl font-bold">Corte</h3>
+        <p>Estilo moderno adaptado a vos</p>
+        <p class="price text-[#d4af37] text-2xl">$500</p>
+      </div>
+      <div class="bg-[#0f172a] p-6 rounded-3xl">
+        <h3 class="text-l md:text-xl font-bold">Fade</h3>
+        <p>Degradado profesional</p>
+        <p class="price text-[#d4af37] text-2xl">$600</p>
+      </div>
+      <div class="bg-[#0f172a] p-6 rounded-3xl">
+        <h3 class="text-l md:text-xl font-bold">Barba</h3>
+        <p>Perfilado completo</p>
+        <p class="price text-[#d4af37] text-2xl">$400</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria mobile -->
+  <section class="w-full md:hidden py-16 px-2 text-white text-center">
+    <h2 class="text-2xl font-bold text-center mb-12">
+      Nuestros trabajos
+    </h2>
+    <div class="flex justify-center">
+      <div onclick="openGallery(0)" class="cursor-pointer relative w-80 h-80 rounded-2xl overflow-hidden group">
+
+        <!-- Imagen portada -->
+        <img src="assets/images/barba_perfilada.webp"
+          class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <p class="text-white text-xl font-semibold">
+            Ver galería
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="galleryModal" class="hidden fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-50">
+    <!-- Botón cerrar -->
+    <button onclick="closeGallery()" class="absolute top-5 right-5 text-white text-3xl">
+      ✕
+    </button>
+    <!-- Flecha izquierda -->
+    <button onclick="prevImage()" class="absolute left-5 text-white text-4xl">
+      ❮
+    </button>
+    <!-- Imagen -->
+    <img id="galleryImage" class="max-w-[90%] max-h-[85%] rounded-xl">
+    <!-- Flecha derecha -->
+    <button onclick="nextImage()" class="absolute right-5 text-white text-4xl">
+      ❯
+    </button>
+  </div>
+
+  <!-- Galeria desktop -->
+  <section class="hidden md:block py-16 text-white">
+
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        Nuestros trabajos
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <img src="assets/images/barba_perfilada.webp" onclick="openGallery(0)"
+          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+        <img src="assets/images/corte_moderno.webp" onclick="openGallery(1)"
+          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+        <img src="assets/images/fade_profesional.webp" onclick="openGallery(2)"
+          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+        <img src="assets/images/corte_moderno.webp" onclick="openGallery(3)"
+          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+        <img src="assets/images/barba_perfilada.webp" onclick="openGallery(4)"
+          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+        <img src="assets/images/fade_profesional.webp" onclick="openGallery(5)"
+          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- Donde estamos -->
+  <section class=" text-center m-auto px-5 py-14 md: max-w-6xl">
+    <div class="flex flex-col justify-center items-center">
+      <h2 class="text-2xl md:text-4xl font-bold text-center mb-12">¿Donde estamos?</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.215533104431!2d-56.19361962410468!3d-34.90104027284912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80321f4669e1%3A0x7b7000ad4e13b855!2sCerro%20Largo%201191%2C%2011100%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1774413227548!5m2!1ses!2suy"
+        class="w-full h-72" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+
+  <footer class="text-center p-5  text-base">
+    <p>© 2026 Barbería Montevideo</p>
+  </footer>
+
+  <!-- Whatsapp -->
+  <a href="https://wa.me/59891472578" target="_blank">
+    <img class="fixed bottom-4 right-4 flex justify-center items-center bg-white p-3 rounded-3xl text-3xl h-16 w-16"
+      src="./assets/Iconos/whatsappSVG.svg" alt="Whatsapp logo">
+  </a>
+
+</body>
+
+<!-- Scripts -->
+<script src="./scripts/javascript.js"></script>
+
+</html>

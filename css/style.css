@@ -1,0 +1,24 @@
+  :root {
+    --primary: #0f172a;
+    --primaryHover: #28385f;
+    --accent: #22c55e;
+    --gold: #d4af37;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  header {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .9)), url('../assets/images/hero.jpg');
+  }
