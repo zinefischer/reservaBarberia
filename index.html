@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/Iconos/favicon.png" type="image/x-icon">
+
   <!-- SEO -->
   <title>Barbería en Montevideo | Cortes modernos y reservas online</title>
   <meta name="description"
@@ -22,9 +25,13 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Koalendar -->
   <script async src="https://koalendar.com/assets/widget.js"></script>
-
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,44 +43,64 @@
   <header class="h-screen flex items-center justify-center text-center bg-cover bg-center bg-no-repeat">
     <div>
       <h1 class="text-3xl md:text-5xl font-bold mb-4">Cortes premium en Montevideo</h1>
-      <p class="text-gray-400 mb-8 text-lg md:text-xl">Elegí tu horario y asegurá tu lugar sin esperas</p>
+      <p class="text-gray-400 mb-8 text-lg md:text-xl">Reservá tu turno en menos de 30 segundos</p>
       <a href="https://koalendar.com/e/reunion-con-zinedine/" target="_blankñ" data-koalendar-widget
         data-koa-type="link"
         class="w-full no-underline md:w-auto bg-white text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition duration-300 shadow-lg">
-        Reservar turno
+        Reservar ahora
       </a>
     </div>
   </header>
 
   <!-- Servicios -->
-  <section class=" text-center m-auto px-5 py-14 md: max-w-6xl">
-    <h2 class="text-2xl md:text-4xl font-bold text-center mb-12">Servicios</h2>
-    <div class="grid md:grid-cols-3 gap-5">
-      <div class="bg-[#0f172a] p-6 rounded-3xl">
-        <h3 class="text-l md:text-xl font-bold">Corte</h3>
-        <p>Estilo moderno adaptado a vos</p>
-        <p class="price text-[#d4af37] text-2xl">$500</p>
+  <section class="text-left md:text-center mx-4 md:m-14 py-6 p-2 md:max-w-6xl" id="servicios">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12">Servicios</h2>
+    <div class="grid md:grid-cols-3 items-stretch gap-5">
+
+      <div
+        class="grid grid-cols-[auto_1fr_auto] h-full items-center gap-3 bg-[#0f172a] hover:bg-[#28385f] px-4 py-6 md:p-6 rounded-3xl transition duration-300">
+        <div class="text-7xl">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="text-left">
+          <h3 class="text-2xl font-bold">Corte</h3>
+          <p class="text-base">Estilo moderno adaptado a vos</p>
+          <p class="text-[#d4af37] text-lg">$500</p>
+        </div>
       </div>
-      <div class="bg-[#0f172a] p-6 rounded-3xl">
-        <h3 class="text-l md:text-xl font-bold">Fade</h3>
-        <p>Degradado profesional</p>
-        <p class="price text-[#d4af37] text-2xl">$600</p>
+
+      <div
+        class="grid grid-cols-[auto_1fr_auto] h-full items-center gap-3 bg-[#0f172a] hover:bg-[#28385f] px-4 py-6 md:p-6 rounded-3xl transition duration-300">
+        <div class="text-7xl">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="text-left">
+          <h3 class="text-2xl font-bold">Fade</h3>
+          <p class="text-base"> Degradado profesional</p>
+          <p class="text-[#d4af37] text-lg">$600</p>
+        </div>
       </div>
-      <div class="bg-[#0f172a] p-6 rounded-3xl">
-        <h3 class="text-l md:text-xl font-bold">Barba</h3>
-        <p>Perfilado completo</p>
-        <p class="price text-[#d4af37] text-2xl">$400</p>
+      <div
+        class="grid grid-cols-[auto_1fr_auto] h-full items-center gap-3 bg-[#0f172a] hover:bg-[#28385f] px-4 py-6 md:p-6 rounded-3xl transition duration-300">
+        <div class="text-7xl">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="text-left">
+          <h3 class="text-2xl font-bold">Barba</h3>
+          <p class="text-base">Perfilado completo</p>
+          <p class="text-[#d4af37] text-lg">$400</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Galeria mobile -->
-  <section class="w-full md:hidden py-16 px-2 text-white text-center">
-    <h2 class="text-2xl font-bold text-center mb-12">
+  <section class="py-6 p-2 mx-4 text-white text-left md:hidden border-t-2 border-gray-500" id="trabajos">
+    <h2 class="text-2xl font-bold mb-8 md:mb-12">
       Nuestros trabajos
     </h2>
-    <div class="flex justify-center">
-      <div onclick="openGallery(0)" class="cursor-pointer relative w-80 h-80 rounded-2xl overflow-hidden group">
+    <div class="flex justify-start ">
+      <div onclick="openGallery(0)" class="cursor-pointer relative w-full h-80 rounded-2xl overflow-hidden group">
 
         <!-- Imagen portada -->
         <img src="assets/images/barba_perfilada.webp"
@@ -108,49 +135,72 @@
   </div>
 
   <!-- Galeria desktop -->
-  <section class="hidden md:block py-16 text-white">
+  <section class="hidden md:block md:max-w-6xl md:m-14 py-6 p-2 mx-4 text-white text-center border-t-2 border-gray-500">
 
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">
-        Nuestros trabajos
-      </h2>
-      <div class="grid md:grid-cols-3 gap-6">
+    <h2 class="text-2xl md:text-3xl font-bold mb-12">
+      Nuestros trabajos
+    </h2>
+    <div class="grid md:grid-cols-3 gap-6">
 
-        <img src="assets/images/barba_perfilada.webp" onclick="openGallery(0)"
-          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
-        <img src="assets/images/corte_moderno.webp" onclick="openGallery(1)"
-          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
-        <img src="assets/images/fade_profesional.webp" onclick="openGallery(2)"
-          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
-        <img src="assets/images/corte_moderno.webp" onclick="openGallery(3)"
-          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
-        <img src="assets/images/barba_perfilada.webp" onclick="openGallery(4)"
-          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
-        <img src="assets/images/fade_profesional.webp" onclick="openGallery(5)"
-          class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
-      </div>
+      <img src="assets/images/barba_perfilada.webp" onclick="openGallery(0)"
+        class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+      <img src="assets/images/corte_moderno.webp" onclick="openGallery(1)"
+        class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
+      <img src="assets/images/fade_profesional.webp" onclick="openGallery(2)"
+        class="rounded-xl h-72 w-full object-cover cursor-pointer hover:scale-105 transition">
     </div>
   </section>
 
   <!-- Donde estamos -->
-  <section class=" text-center m-auto px-5 py-14 md: max-w-6xl">
-    <div class="flex flex-col justify-center items-center">
-      <h2 class="text-2xl md:text-4xl font-bold text-center mb-12">¿Donde estamos?</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.215533104431!2d-56.19361962410468!3d-34.90104027284912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80321f4669e1%3A0x7b7000ad4e13b855!2sCerro%20Largo%201191%2C%2011100%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1774413227548!5m2!1ses!2suy"
-        class="w-full h-72" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+  <section class="text-left md:text-center mx-4 md:m-14 py-6 p-2 md: max-w-6xl border-t-2 border-gray-500 flex flex-col"
+    id="ubicacion">
+    <h2 class="text-2xl md:text-3xl font-bold mb-12">¿Donde estamos?</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.215533104431!2d-56.19361962410468!3d-34.90104027284912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80321f4669e1%3A0x7b7000ad4e13b855!2sCerro%20Largo%201191%2C%2011100%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1774413227548!5m2!1ses!2suy"
+      class="w-full h-72" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
 
-  <footer class="text-center p-5  text-base">
-    <p>© 2026 Barbería Montevideo</p>
+  <footer
+    class="pb-16 pt-6 p-2 text-base mx-4 md:m-14 flex md:max-w-6xl border-t-2 border-gray-500 flex flex-col md:flex-row md:justify-between">
+    <div class="flex flex-col gap-2 pb-6 ">
+      <h3 class="text-xl font-bold pb-1">Redes sociales</h3>
+      <a href="https://www.instagram.com/zine.fischer/" target="_blank">
+        <i
+          class="fa-brands fa-instagram text-3xl hover:scale-110 transition duration-300 text-black hover:text-red-500 bg-white rounded-2xl p-1"></i>
+      </a>
+    </div>
+    <div class="flex flex-col gap-2 pb-6">
+      <h3 class="text-xl font-bold pb-1">Navegación</h3>
+      <a href="#servicios" class="group hover:text-blue-300 transition duration-500">Servicios
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-300"></span>
+      </a>
+      <a href="#trabajos" class="group hover:text-blue-300 transition duration-500">Nuestros trabajos
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-300"></span>
+      </a>
+      <a href="#ubicacion" class="group hover:text-blue-300 transition duration-500">¿Dónde estamos?
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-300"></span>
+      </a>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h3 class="text-xl font-bold pb-1">Más información</h3>
+      <div class="flex flex-row items-center gap-x-2">
+        <i class="fa-solid fa-location-dot text-blue-400"></i>
+        <a href="https://maps.app.goo.gl/gATCLnrfzXpKCjtCA" target="_blank" class="group hover:text-blue-300 transition duration-500">Cerro Largo 1191 - Montevideo
+          <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-300"></span>
+        </a>
+      </div>
+      <div class="flex flex-row items-center gap-x-2">
+        <i class="fa-regular fa-clock text-blue-400"></i>
+        <p>10:00 - 19:00</p>
+      </div>
+    </div>
   </footer>
 
   <!-- Whatsapp -->
   <a href="https://wa.me/59891472578" target="_blank">
-    <img class="fixed bottom-4 right-4 flex justify-center items-center bg-white p-3 rounded-3xl text-3xl h-16 w-16"
-      src="./assets/Iconos/whatsappSVG.svg" alt="Whatsapp logo">
+    <i
+      class="fa-brands fa-square-whatsapp fixed bottom-4 right-4 text-white hover:text-green-500 text-6xl hover:scale-110 transition duration-300"></i>
   </a>
 
 </body>
